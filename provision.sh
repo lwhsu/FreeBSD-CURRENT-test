@@ -26,6 +26,8 @@ VBoxManage storageattach ${VM_NAME} --storagectl "SATA Controller" --port 1 --de
 
 VBoxHeadless -startvm ${VM_NAME} &
 
+echo "${VM_NAME} started"
+
 # wait for install...
 # XXX: need to find a way to know when installation is done
 sleep 300
@@ -33,3 +35,5 @@ sleep 300
 VBoxManage controlvm ${VM_NAME} acpipowerbutton
 
 wait
+
+echo "${VM_NAME} privisioned"
