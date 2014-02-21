@@ -28,7 +28,7 @@ VBoxHeadless -startvm ${VM_NAME} &
 
 # wait for install...
 # XXX: need to find a way to know when installation is done
-sleep 60
+sleep 300
 
 VBoxManage controlvm ${VM_NAME} acpipowerbutton
 
