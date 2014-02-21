@@ -30,7 +30,7 @@ echo "${VM_NAME} started"
 
 # wait for install...
 # XXX: need to find a way to know when installation is done
-sleep 300
+sleep 180
 
 VBoxManage controlvm ${VM_NAME} acpipowerbutton
 
