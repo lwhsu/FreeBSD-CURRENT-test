@@ -24,10 +24,12 @@ fetch http://127.0.0.1:8180/jenkins/job/FreeBSD-CURRENT/lastSuccessfulBuild/arti
 
 VBoxManage storageattach ${VM_NAME} --storagectl "SATA Controller" --port 1 --device 0 --type dvddrive --medium ./disc1.iso
 
-VBoxHeadless -startvm ${VM_NAME}
+VBoxHeadless -startvm ${VM_NAME} &
 
 # wait for install...
 # XXX: need to find a way to know when installation is done
 sleep 60
 
 VBoxManage controlvm ${VM_NAME} acpipowerbutton
+
+wait
