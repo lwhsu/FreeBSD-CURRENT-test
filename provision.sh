@@ -34,6 +34,8 @@ sleep 300
 
 VBoxManage controlvm ${VM_NAME} acpipowerbutton
 
+VBoxManage storageattach ${VM_NAME} --storagectl "SATA Controller" --port 1 --device 0 --type dvddrive --medium emptydrive
+
 wait
 
 echo "${VM_NAME} privisioned"
