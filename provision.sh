@@ -18,7 +18,7 @@ VBoxManage storageattach ${VM_NAME} --storagectl "SATA Controller" --port 0 --de
 #VBoxManage storageattach ${VM_NAME} --storagectl "SATA Controller" --port 1 --device 0 --type dvddrive --medium emptydrive
 
 VBoxManage modifyvm ${VM_NAME} --nic1 nat --nictype1 virtio
-VBoxManage modifyvm ${VM_NAME} --nic2 hostonly --nictype2 virtio --hostonlyadapter2 vboxnet0
+VBoxManage modifyvm ${VM_NAME} --nic2 hostonly --nictype2 virtio --hostonlyadapter2 vboxnet0 --macaddress2 0800270EA855
 
 fetch http://127.0.0.1:8180/jenkins/job/FreeBSD-CURRENT/lastSuccessfulBuild/artifact/obj/disc1.iso
 
