@@ -3,7 +3,7 @@
 VM_NAME=sandbox
 
 VBoxHeadless -startvm ${VM_NAME} &
-sleep 30
+sleep 60
 
 echo "${VM_NAME} started"
 
