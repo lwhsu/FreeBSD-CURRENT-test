@@ -38,4 +38,4 @@ VBoxManage storageattach ${VM_NAME} --storagectl "SATA Controller" --port 1 --de
 
 wait
 
-echo "${VM_NAME} privisioned"
+echo "${VM_NAME} provisioned"
